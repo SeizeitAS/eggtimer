@@ -1,0 +1,11 @@
+{
+  "status": "foreløpig, må testes (A4 i docs/scrum.md)",
+  "unit": "sekunder",
+  "water": {
+    "boiling": {
+      "soft": 240,
+      "semi": 360,
+      "hard": 540
+    }
+  }
+}

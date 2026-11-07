@@ -16,10 +16,26 @@
   </header>
 
   <main>
-    <p data-i18n="app.placeholder">Appen er under oppsett.</p>
+    <section class="card">
+      <h2 id="hardness-heading" class="section-title" data-i18n="egg.hardness.label">Hvor hardt skal egget være?</h2>
+      <div id="hardness" class="choices" role="radiogroup"></div>
+      <p id="hint" class="hint muted" data-i18n="egg.hint"></p>
+    </section>
+
+    <section class="card timer" aria-live="polite">
+      <p id="status" class="status" data-i18n="egg.ready"></p>
+      <p id="countdown" class="countdown">0:00</p>
+      <div class="actions">
+        <button id="start" type="button" class="primary" data-i18n="egg.start">Start</button>
+        <button id="cancel" type="button" hidden data-i18n="egg.cancel">Avbryt</button>
+        <button id="silence" type="button" class="primary" hidden data-i18n="egg.silence">Stopp pipet</button>
+      </div>
+    </section>
   </main>
 
   <script src="js/i18n.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/alarm.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

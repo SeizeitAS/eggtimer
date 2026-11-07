@@ -1,5 +1,15 @@
 {
   "app.title": "Eggtimer",
-  "app.placeholder": "The app is being set up.",
-  "language.label": "Language"
+  "language.label": "Language",
+  "egg.hardness.label": "How firm should the egg be?",
+  "egg.soft": "Soft-boiled",
+  "egg.semi": "Semi-set",
+  "egg.hard": "Hard-boiled",
+  "egg.hint": "The countdown starts when the water boils. Times are preliminary.",
+  "egg.ready": "Ready",
+  "egg.remaining": "Remaining",
+  "egg.done": "The egg is ready!",
+  "egg.start": "Start",
+  "egg.cancel": "Cancel",
+  "egg.silence": "Stop beeping"
 }

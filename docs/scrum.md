@@ -63,8 +63,8 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | # | Oppgave | Avhengig av |
 | --- | --- | --- |
 | B1 | Grunnstruktur: HTML, CSS, JavaScript og lang/ | A3 |
-| B2 | Valg av hardhet og nedtelling (kokende vann) | A4, B1 |
-| B3 | Pipelyd og vibrasjon når tiden er ute, inkl. test på mobil | B1 |
+| B2 | Valg av hardhet og nedtelling (kokende vann). Bygget med foreløpige tider, oppdateres etter A4 | A4 (tider), B1 |
+| B3 | Pipelyd og vibrasjon når tiden er ute. Testet i nettleser, ikke på mobil ennå | B1 |
 | B4 | Kaldt vann-modus med valgt startmetode | A2, B2 |
 
 ### Epic C: Bestillingsmodus
@@ -116,3 +116,4 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | --- | --- | --- | --- |
 | Sprint 1 | _(dato)_ | Beslutninger og testing | Planlagt |
 | Sprint 1 (grunnstruktur) | 2026-11-07 | Web-app med språkfiler og språktest (B1, E1). Beslutningene er tatt. | Gjort |
+| Sprint 2 (eggtimer) | 2026-11-07 | Valg av hardhet, nedtelling og pipelyd (B2, B3) | Gjort, unntatt test på mobil og endelige tider |
