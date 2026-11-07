@@ -14,7 +14,7 @@ Tidene er veiledende. Kildene varierer, og tykkelse og størrelse på kakene på
 | Serinakaker | 200 °C | 8 min | Kilder oppgir 6 min (200 °C), ca. 10 min (225 °C) og 10–15 min (180 °C). Stekes til lysebrune |
 | Sjakkbrettkaker | 175 °C | 10 min | Tine oppgir 175 °C i ca. 10 min. DN oppgir 190 °C i 8–10 min |
 | Sandnøtter | 200 °C | 10 min | Tine og Det søte liv oppgir 200 °C i ca. 10 min. Skal være lyse etter steking |
-| Heksefingre | 175 °C | 9 min | **Ikke verifisert.** Ingen kilde om heksefingre fant vi. Tiden er et utgangspunkt basert på pepperkaker, og må testes |
+| Heksefingre | 190 °C | 9 min | Små pølser av kransekakedeig. Kilder for kransekakestenger: 190 °C i 8–9 min og 200 °C i ca. 10 min. Ingen kilde for heksefingre direkte, så må testes. Tørk ikke, bak til lys gylne kanter |
 | Lussekatter | 225 °C | 9 min | Kilder oppgir 225 °C i 8–10 min, 220 °C i ca. 8–10 min og 200 °C i 10–15 min. Store fletter tar lengre tid |
 
 ## Kilder
@@ -35,7 +35,7 @@ Tidene er veiledende. Kildene varierer, og tykkelse og størrelse på kakene på
 
 ## Åpent
 
-- Heksefingre: ingen kilde. Må testes før tiden brukes i appen.
+- Heksefingre: laget av kransekakedeig (små pølser). Ingen kilde for akkurat dette, så tiden må testes før den brukes i appen. Kilde for kransekakestenger er 190 °C i 8–9 min.
 - Sirupssnipper: kun én kilde, så den bør verifiseres.
 - Lussekatter: store fletter tar lengre tid (DN oppgir 20–30 min ved 180 °C). Egen rad bør vurderes.
 - Ny julebakst legges til som en ny rad. Navn og tid skal også ligge i språkfilene.
