@@ -2,7 +2,7 @@
 
 Eggtimer gir nøyaktig nedtelling for kokte egg, og en vanlig timer for julebakst. Velg hardhet og om vannet er kaldt eller kokende. Med bestillingsmodus kan du legge flere egg i samme kjele og få varsel etter hvert som hver gruppe er ferdig. Når tiden er ute, spilles en pipelyd. Språket kan byttes.
 
-**Status:** eggtimer for kokende vann og kaldt vann er laget, med kalibrering og tilbakemelding. Tidene er foreløpige. Bestillingsmodus og julebakst-timer er ikke laget ennå.
+**Status:** eggtimer for enkeltegg og bestillinger, for kokende og kaldt vann. Kalibrering og tilbakemelding er laget. Tidene er foreløpige. Julebakst-timer er ikke laget ennå.
 
 ## Kjøre lokalt
 
@@ -10,12 +10,16 @@ Appen er en statisk web-app. Den må kjøres via en lokal server, fordi språkfi
 
 ```bash
 npm start        # starter server på http://localhost:8000
-npm test         # kjører tester for språkfiler, nedtelling, tidsdata og kalibrering
+npm test         # kjører tester for språk, nedtelling, tidsdata, kalibrering og bestilling
 ```
 
 ## Tider
 
 Tidene for kokende vann ligger i `data/egg-times.json`, i sekunder. De er foreløpige til testserien (A4 i `docs/scrum.md`) er gjort.
+
+## Bestilling
+
+I bestillingsmodus velger du antall egg per hardhet, for eksempel 2 bløtkokte, 1 smilende og 3 hardkokte. Alle egg starter samtidig. Når en gruppe er klar, piper appen, og du trykker «Tatt ut». Du kan ikke legge til egg etter at bestillingen er startet.
 
 ## Kaldt vann og kalibrering
 

@@ -195,3 +195,64 @@ button.secondary {
 .adjust p {
   margin: 0 0 8px;
 }
+
+.count {
+  width: 72px;
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--fg);
+  text-align: center;
+}
+
+.choice input.count {
+  justify-self: start;
+}
+
+.order-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  text-align: left;
+}
+
+.order-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.order-row.due {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.order-row.taken {
+  opacity: 0.6;
+}
+
+.order-label {
+  font-weight: 600;
+}
+
+.order-status {
+  grid-column: 1;
+}
+
+.order-countdown {
+  grid-column: 2;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.order-take {
+  grid-column: 1 / -1;
+  min-width: 0;
+  padding: 10px;
+}

@@ -71,9 +71,9 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 
 | # | Oppgave | Avhengig av |
 | --- | --- | --- |
-| C1 | Modell for bestilling: liste med antall og hardhet | B2 |
-| C2 | Varsler i rekkefølge etter klar-tid, og samlet varsel ved likt tidspunkt | C1 |
-| C3 | Visning av status: hvilke grupper som er ferdige og hvilke som gjenstår | C2 |
+| C1 | Modell for bestilling: antall per hardhet. Gjort | B2 |
+| C2 | Varsler i rekkefølge etter klar-tid. Gjort: varsel for hver gruppe, og én pipe for alle grupper som er klare. Ved helt likt tidspunkt vises radene hver for seg | C1 |
+| C3 | Visning av status: hvilke grupper som er ferdige og hvilke som gjenstår. Gjort | C2 |
 
 ### Epic D: Julebakst-timer
 
@@ -118,3 +118,4 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | Sprint 1 (grunnstruktur) | 2026-11-07 | Web-app med språkfiler og språktest (B1, E1). Beslutningene er tatt. | Gjort |
 | Sprint 2 (eggtimer) | 2026-11-07 | Valg av hardhet, nedtelling og pipelyd (B2, B3) | Gjort, unntatt test på mobil og endelige tider |
 | Sprint 2 (kaldt vann) | 2026-11-07 | Kaldt vann-modus, kalibrering og tilbakemelding (B4, F1, F3, F4, F5) | Gjort. F2 og F4b er ikke med |
+| Sprint 3 (bestilling) | 2026-11-07 | Bestillingsmodus med varsler og status (C1, C2, C3) | Gjort. Julebakst-timer (D) er ikke med |

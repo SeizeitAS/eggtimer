@@ -17,8 +17,20 @@
 
   <main>
     <section class="card">
+      <h2 id="mode-heading" class="section-title" data-i18n="mode.label">Modus</h2>
+      <div id="mode" class="choices" role="radiogroup"></div>
+    </section>
+
+    <section id="hardness-card" class="card">
       <h2 id="hardness-heading" class="section-title" data-i18n="egg.hardness.label">Hvor hardt skal egget være?</h2>
       <div id="hardness" class="choices" role="radiogroup"></div>
+    </section>
+
+    <section id="order-card" class="card" hidden>
+      <h2 id="order-heading" class="section-title" data-i18n="order.heading">Hvor mange av hver?</h2>
+      <div id="order-inputs" class="choices"></div>
+      <p id="order-total" class="hint muted"></p>
+      <p id="order-note" class="hint muted" data-i18n="order.note"></p>
     </section>
 
     <section class="card">
@@ -32,6 +44,9 @@
     <section class="card timer" aria-live="polite">
       <p id="status" class="status" data-i18n="egg.ready"></p>
       <p id="countdown" class="countdown">0:00</p>
+
+      <div id="order-list" class="order-list" hidden></div>
+
       <div class="actions">
         <button id="start" type="button" class="primary" data-i18n="egg.start">Start</button>
         <button id="boil" type="button" class="primary" hidden data-i18n="egg.boilNow">Vann koker</button>
@@ -48,7 +63,7 @@
         </div>
       </div>
 
-      <div class="adjust">
+      <div id="adjust-block" class="adjust">
         <p id="adjust-info" class="muted" data-i18n="egg.adjust.none">Ingen justering</p>
         <button id="reset-adjust" type="button" class="secondary" hidden data-i18n="egg.adjust.reset">Nullstill justering</button>
       </div>
@@ -59,6 +74,7 @@
   <script src="js/timer.js"></script>
   <script src="js/alarm.js"></script>
   <script src="js/calibration.js"></script>
+  <script src="js/order.js"></script>
   <script src="js/store.js"></script>
   <script src="js/app.js"></script>
 </body>

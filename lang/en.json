@@ -31,5 +31,19 @@
   "water.boilTime": "time to boil {time}",
   "water.calibrated": "Calibrated: the water boils after {time}.",
   "water.noCalibration": "Not calibrated. Calibrate the pot before using the estimate.",
-  "water.calibrate": "Calibrate pot"
+  "water.calibrate": "Calibrate pot",
+  "mode.label": "Mode",
+  "mode.single": "Single egg",
+  "mode.order": "Order",
+  "order.heading": "How many of each?",
+  "order.total": "Total: {count} eggs",
+  "order.empty": "Choose at least one egg to start.",
+  "order.start": "Start order",
+  "order.note": "All eggs start at the same time. You cannot add eggs once the order has started.",
+  "order.ready": "Ready. All eggs are done after",
+  "order.waiting": "Remaining",
+  "order.dueNow": "Take out now",
+  "order.takeOut": "Taken out",
+  "order.done": "Done",
+  "order.allTaken": "All eggs are out!"
 }

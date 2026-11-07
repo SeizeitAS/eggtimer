@@ -31,5 +31,19 @@
   "water.boilTime": "tid til kok {time}",
   "water.calibrated": "Kalibrert: vannet koker etter {time}.",
   "water.noCalibration": "Ikke kalibrert. Kalibrer kasserollen før du bruker estimat.",
-  "water.calibrate": "Kalibrer kasserolle"
+  "water.calibrate": "Kalibrer kasserolle",
+  "mode.label": "Modus",
+  "mode.single": "Enkeltegg",
+  "mode.order": "Bestilling",
+  "order.heading": "Hvor mange av hver?",
+  "order.total": "Totalt: {count} egg",
+  "order.empty": "Velg minst ett egg for å starte.",
+  "order.start": "Start bestilling",
+  "order.note": "Alle egg starter samtidig. Du kan ikke legge til egg når bestillingen er startet.",
+  "order.ready": "Klar. Alle egg er ferdige etter",
+  "order.waiting": "Gjenstår",
+  "order.dueNow": "Ta ut nå",
+  "order.takeOut": "Tatt ut",
+  "order.done": "Ferdig",
+  "order.allTaken": "Alle egg er tatt ut!"
 }
