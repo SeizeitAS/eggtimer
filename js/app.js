@@ -22,6 +22,13 @@
   };
   const TICK_MS = 250;
 
+  // iPhone-nettlesere støtter ikke vibrasjon fra nettsider. Da er lyden det eneste varselet.
+  function isIosWithoutVibration() {
+    const ua = (window.navigator && window.navigator.userAgent) || '';
+    const ios = /iPhone|iPod|iPad/.test(ua);
+    return ios && !(window.navigator && typeof window.navigator.vibrate === 'function');
+  }
+
   // phase: idle | heating | calibrating | running | done | orderRunning | orderDone | bakeRunning | bakeDone
   const state = {
     times: null,            // sekunder per hardhet for kokende vann, fra data/egg-times.json
@@ -607,6 +614,8 @@
     el.cancel.hidden = !canCancel;
     el.cancel.textContent = i18n.t('egg.cancel');
     el.silence.hidden = !state.alarmOn;
+    el.iosNote.hidden = !(state.alarmOn && isIosWithoutVibration());
+    el.iosNote.textContent = i18n.t('alarm.iosNote');
     el.silence.textContent = i18n.t('egg.silence');
 
     // Tilbakemelding og justering gjelder enkeltegg.
@@ -739,6 +748,7 @@
     el.boil = byId('boil');
     el.cancel = byId('cancel');
     el.silence = byId('silence');
+    el.iosNote = byId('ios-note');
     el.feedback = byId('feedback');
     el.feedbackLabel = byId('feedback-label');
     el.feedbackShort = byId('feedback-short');

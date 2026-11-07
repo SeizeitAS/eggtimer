@@ -28,6 +28,7 @@ Registrer medgått tid per arbeidsdag. Oppgi tid i timer med én desimal (for ek
 | 2026-11-07 | SeizeitAS (med Claude) | Bestillingsmodus med varsler og status (C1, C2, C3), tester og nettleserkontroll | Utvikling | 1,5 | Estimat, ikke målt |
 | 2026-11-07 | SeizeitAS (med Claude) | Brukerhåndbok i appen på norsk og engelsk (G1), tester og nettleserkontroll | Dokumentasjon | 1,0 | Estimat, ikke målt |
 | 2026-11-07 | SeizeitAS (med Claude) | Julebakst-timer med standardtider og egen timer (D1, D2), tester og nettleserkontroll | Utvikling | 1,0 | Estimat, ikke målt |
+| 2026-11-07 | SeizeitAS (med Claude) | Telefontest i simulert modus og melding for iPhone om vibrasjon | Test | 0,3 | Estimat, ikke målt |
 
 _Tidene er estimater. Vi har ikke målt tiden i sanntid, så juster etter behov._
 
@@ -35,4 +36,4 @@ _Tidene er estimater. Vi har ikke målt tiden i sanntid, så juster etter behov.
 
 | Navn | Uke | Totalt timer |
 | --- | --- | --- |
-| SeizeitAS (med Claude) | 45 | 11,8 |
+| SeizeitAS (med Claude) | 45 | 12,1 |

@@ -69,5 +69,6 @@
   "bake.item.sjakkbrettkaker": "Chess board cookies",
   "bake.item.sandnotter": "Sand nuts",
   "bake.item.heksefingre": "Witch fingers",
-  "bake.item.lussekatter": "Lussekatter (saffron buns)"
+  "bake.item.lussekatter": "Lussekatter (saffron buns)",
+  "alarm.iosNote": "On iPhone, web pages cannot vibrate. The sound is what alerts you, so keep the sound on."
 }
