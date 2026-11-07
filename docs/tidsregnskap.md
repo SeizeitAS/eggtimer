@@ -20,6 +20,7 @@ Registrer medgått tid per arbeidsdag. Oppgi tid i timer med én desimal (for ek
 | 2026-11-07 | SeizeitAS (med Claude) | Oppsett av repo `eggtimer`, klone og første commit | Annet | 0,1 | Estimat, ikke målt |
 | 2026-11-07 | SeizeitAS (med Claude) | Julebakst: standardtider med kilder | Dokumentasjon | 0,3 | Estimat, ikke målt |
 | 2026-11-07 | SeizeitAS (med Claude) | Utviklingsplan (scrum), bestillingsmodus og oppdatering av dokumentasjon | Scrum | 0,8 | Estimat, ikke målt |
+| 2026-11-07 | SeizeitAS (med Claude) | Julebakst: serinakaker, sjakkbrettkaker, sandnøtter, heksefingre og lussekatter | Dokumentasjon | 0,4 | Estimat, ikke målt |
 
 _Tidene er estimater. Vi har ikke målt tiden i sanntid, så juster etter behov._
 
@@ -27,4 +28,4 @@ _Tidene er estimater. Vi har ikke målt tiden i sanntid, så juster etter behov.
 
 | Navn | Uke | Totalt timer |
 | --- | --- | --- |
-| SeizeitAS (med Claude) | 45 | 3,3 |
+| SeizeitAS (med Claude) | 45 | 3,7 |
