@@ -169,3 +169,29 @@ button.primary {
 button[hidden] {
   display: none;
 }
+
+.choice.disabled {
+  opacity: 0.6;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+  margin-top: 8px;
+}
+
+.feedback {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.adjust {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.adjust p {
+  margin: 0 0 8px;
+}

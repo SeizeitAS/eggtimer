@@ -19,6 +19,13 @@
     <section class="card">
       <h2 id="hardness-heading" class="section-title" data-i18n="egg.hardness.label">Hvor hardt skal egget være?</h2>
       <div id="hardness" class="choices" role="radiogroup"></div>
+    </section>
+
+    <section class="card">
+      <h2 id="water-heading" class="section-title" data-i18n="water.label">Vann</h2>
+      <div id="water" class="choices" role="radiogroup"></div>
+      <p id="calibration-info" class="hint muted" hidden></p>
+      <button id="calibrate" type="button" class="secondary" hidden data-i18n="water.calibrate">Kalibrer kasserolle</button>
       <p id="hint" class="hint muted" data-i18n="egg.hint"></p>
     </section>
 
@@ -27,8 +34,23 @@
       <p id="countdown" class="countdown">0:00</p>
       <div class="actions">
         <button id="start" type="button" class="primary" data-i18n="egg.start">Start</button>
+        <button id="boil" type="button" class="primary" hidden data-i18n="egg.boilNow">Vann koker</button>
         <button id="cancel" type="button" hidden data-i18n="egg.cancel">Avbryt</button>
         <button id="silence" type="button" class="primary" hidden data-i18n="egg.silence">Stopp pipet</button>
+      </div>
+
+      <div id="feedback" class="feedback" hidden>
+        <p id="feedback-label" class="section-title" data-i18n="egg.feedback.label">Hvordan ble egget?</p>
+        <div class="actions">
+          <button id="feedback-short" type="button" data-feedback="short" data-i18n="egg.feedback.short">For kort</button>
+          <button id="feedback-ok" type="button" data-feedback="ok" data-i18n="egg.feedback.ok">Passe</button>
+          <button id="feedback-long" type="button" data-feedback="long" data-i18n="egg.feedback.long">For lang</button>
+        </div>
+      </div>
+
+      <div class="adjust">
+        <p id="adjust-info" class="muted" data-i18n="egg.adjust.none">Ingen justering</p>
+        <button id="reset-adjust" type="button" class="secondary" hidden data-i18n="egg.adjust.reset">Nullstill justering</button>
       </div>
     </section>
   </main>
@@ -36,6 +58,8 @@
   <script src="js/i18n.js"></script>
   <script src="js/timer.js"></script>
   <script src="js/alarm.js"></script>
+  <script src="js/calibration.js"></script>
+  <script src="js/store.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

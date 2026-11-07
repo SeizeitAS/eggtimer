@@ -65,7 +65,7 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | B1 | Grunnstruktur: HTML, CSS, JavaScript og lang/ | A3 |
 | B2 | Valg av hardhet og nedtelling (kokende vann). Bygget med foreløpige tider, oppdateres etter A4 | A4 (tider), B1 |
 | B3 | Pipelyd og vibrasjon når tiden er ute. Testet i nettleser, ikke på mobil ennå | B1 |
-| B4 | Kaldt vann-modus med valgt startmetode | A2, B2 |
+| B4 | Kaldt vann-modus med valgt startmetode. Gjort: «vann koker»-knapp og estimat | A2, B2 |
 
 ### Epic C: Bestillingsmodus
 
@@ -103,12 +103,12 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 
 | # | Oppgave | Avhengig av |
 | --- | --- | --- |
-| F1 | Tilbakemelding etter koking: «for kort», «passe» eller «for lang». Justering i sekunder per hardhet og startmetode | B2 |
+| F1 | Tilbakemelding etter koking: «for kort», «passe» eller «for lang». Justering i sekunder per hardhet og vanngruppe. Gjort | B2 |
 | F2 | Tilbakemelding etter baking: samme valg per bakst, justering i sekunder per navn | D1 |
-| F3 | Lagring av justeringer lokalt i nettleseren, med mulighet til å nullstille | F1, F2 |
-| F4 | Kalibreringsmodus for estimat: brukeren setter kasserollen på komfyren, starter kalibrering og trykker «vann koker» når vannet koker. Tiden til kok lagres som utgangspunkt, og oppdateres etter tilbakemelding | B4, F1 |
+| F3 | Lagring av justeringer lokalt i nettleseren, med mulighet til å nullstille. Gjort | F1, F2 |
+| F4 | Kalibreringsmodus for estimat: brukeren setter kasserollen på komfyren, starter kalibrering og trykker «vann koker» når vannet koker. Tiden til kok lagres. Gjort. Tilbakemeldinger justerer eggtiden, ikke kokestimatet. Kokestimatet må kalibreres på nytt | B4, F1 |
 | F4b | Flere kasseroller: kalibrering kan lagres per navngitt kasserolle, slik at brukeren kan velge riktig ved oppstart | F4 |
-| F5 | Visning av gjeldende justering for hver tid, så brukeren ser hva som er lagret | F3 |
+| F5 | Visning av gjeldende justering for hver tid, så brukeren ser hva som er lagret. Gjort | F3 |
 
 ## Sprintlogg
 
@@ -117,3 +117,4 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | Sprint 1 | _(dato)_ | Beslutninger og testing | Planlagt |
 | Sprint 1 (grunnstruktur) | 2026-11-07 | Web-app med språkfiler og språktest (B1, E1). Beslutningene er tatt. | Gjort |
 | Sprint 2 (eggtimer) | 2026-11-07 | Valg av hardhet, nedtelling og pipelyd (B2, B3) | Gjort, unntatt test på mobil og endelige tider |
+| Sprint 2 (kaldt vann) | 2026-11-07 | Kaldt vann-modus, kalibrering og tilbakemelding (B4, F1, F3, F4, F5) | Gjort. F2 og F4b er ikke med |
