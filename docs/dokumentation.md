@@ -16,7 +16,21 @@ Gi en enkel og pålitelig måte å tidsstyre koking av egg og baking, uten å gj
 
 Brukeren velger hardhet og startmetode. Nedtellingen starter, og pipelyden spilles når tiden er ute.
 
-**Kaldt vann** er vann på 5–10 °C. **Kokende vann** er vann som koker. For kaldt vann trykker brukeren på «vann koker»-knappen når vannet koker, og nedtellingen starter da.
+**Kaldt vann** er vann på 5–10 °C. **Kokende vann** er vann som koker. For kaldt vann velger brukeren en av to moduser:
+
+- **«Vann koker»-knapp:** brukeren trykker når vannet koker, og nedtellingen starter da.
+- **Estimat:** appen starter nedtellingen etter en tid til kok som brukeren har kalibrert.
+
+### 1b. Kalibrering etter tilbakemelding
+
+Etter koking eller baking kan brukeren gi tilbakemelding:
+
+- **Egg:** «for kort», «passe» eller «for lang».
+- **Baking:** samme valg, per bakst.
+
+Hver tilbakemelding justerer tiden med et fast steg (foreslått 30 sekunder for egg, 1 minutt for baking), med en øvre grense på ±3 minutter. Justeringen lagres per hardhet og startmetode for egg, og per navn for baking. Brukeren kan se og nullstille justeringene.
+
+Justeringene lagres lokalt i nettleseren, slik at de er knyttet til den enheten brukeren bruker. Synkronisering mellom enheter er ikke med i første versjon.
 
 | Hardhet | Beskrivelse | Status |
 | --- | --- | --- |

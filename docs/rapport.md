@@ -124,3 +124,12 @@ Kildene er uenige, og forutsetningene er ofte ikke oppgitt. Den største forskje
 - **Språk:** norsk og engelsk. Flere språk kan legges til med egen språkfil.
 
 - **Startmetode for kaldt vann:** manuell «vann koker»-knapp. Nedtellingen starter når brukeren trykker på knappen. Estimat av tiden til kok er valgt bort, fordi tiden avhenger av kjele og komfyr.
+
+## 11. Kaldt vann og kalibrering (2026-11-07)
+
+- **Kaldt vann:** brukeren velger mellom «vann koker»-knapp og estimat. Dette erstatter beslutningen i punkt 10 om bare knapp.
+- **Kalibrering:** tider justeres etter tilbakemelding fra koking og baking. Justeringen lagres lokalt i nettleseren.
+
+**Risiko:** lokal lagring gir ingen synkronisering mellom enheter, og tilbakemeldinger fra én enhet gjelder ikke den andre. Dette bør vurderes igjen når vi vet hvor mange som bruker appen.
+
+**Risiko for estimat:** tiden til kok er avhengig av kjele og komfyr, og varierer mellom økter. Estimatet bør derfor vises med en tydelig merking, og brukeren bør kunne overstyre det.
