@@ -16,7 +16,7 @@ Gi en enkel og pålitelig måte å tidsstyre koking av egg og baking, uten å gj
 
 Brukeren velger hardhet og startmetode. Nedtellingen starter, og pipelyden spilles når tiden er ute.
 
-**Kaldt vann** er vann på 5–10 °C. **Kokende vann** er vann som koker. Startmetoden for kaldt vann er ikke besluttet ennå, se `docs/scrum.md`.
+**Kaldt vann** er vann på 5–10 °C. **Kokende vann** er vann som koker. For kaldt vann trykker brukeren på «vann koker»-knappen når vannet koker, og nedtellingen starter da.
 
 | Hardhet | Beskrivelse | Status |
 | --- | --- | --- |

@@ -123,4 +123,4 @@ Kildene er uenige, og forutsetningene er ofte ikke oppgitt. Den største forskje
 - **Plattform:** web-app.
 - **Språk:** norsk og engelsk. Flere språk kan legges til med egen språkfil.
 
-**Fortsatt åpent:** startmetode for kaldt vann (manuell «vann koker»-knapp eller estimat av tiden til kok). Med vann på 5–10 °C er tiden til kok lang og avhengig av kjele og komfyr, så en manuell knapp er fortsatt det enkleste utgangspunktet.
+- **Startmetode for kaldt vann:** manuell «vann koker»-knapp. Nedtellingen starter når brukeren trykker på knappen. Estimat av tiden til kok er valgt bort, fordi tiden avhenger av kjele og komfyr.

@@ -18,7 +18,7 @@ Hver sprint varer **2 uker**. Sprint 1 starter når beslutningene under er tatt.
 | 2026-11-07 | «Kaldt vann» er vann på 5–10 °C. |
 | 2026-11-07 | Plattformen er web-app. |
 | 2026-11-07 | Språk er norsk og engelsk. Flere språk kan legges til med egen språkfil. |
-| Åpen | Startmetode for kaldt vann: manuell «vann koker»-knapp eller estimat av tiden til kok. |
+| 2026-11-07 | Kaldt vann startes med en manuell «vann koker»-knapp. Nedtellingen starter når brukeren trykker på knappen. Ingen estimat av tiden til kok. |
 
 ## Definition of Done
 
