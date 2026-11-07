@@ -115,3 +115,12 @@ Kildene er uenige, og forutsetningene er ofte ikke oppgitt. Den største forskje
 **Praktisk startpunkt (ikke verifisert):** For et stort egg fra kjøleskap, ved havnivå og tid fra vannet igjen koker jevnt, er ca. 6 min et rimelig utgangspunkt for smilende. Legg til 30–60 sekunder i høyden. Test med ett egg før tallet brukes i appen.
 
 **Konsekvens for appen:** Smilende bør ha egen tid i første versjon, og testserien (A4 i `scrum.md`) bør kjøres med egg fra kjøleskap og romtemperatur. Kalibrering for høyde kommer senere.
+
+## 10. Besvarte beslutninger (2026-11-07)
+
+- **Smilende:** en mellomting mellom bløtkokt og hardkokt. Deler av plommen er stivnet, og ingenting er helt flytende. Dette er ikke samme som «smilende» i kildene i punkt 9, som tar utgangspunkt i stivnet plomme i kantene. Tidene i punkt 9 må derfor testes mot denne definisjonen.
+- **Kaldt vann:** vann på 5–10 °C.
+- **Plattform:** web-app.
+- **Språk:** norsk og engelsk. Flere språk kan legges til med egen språkfil.
+
+**Fortsatt åpent:** startmetode for kaldt vann (manuell «vann koker»-knapp eller estimat av tiden til kok). Med vann på 5–10 °C er tiden til kok lang og avhengig av kjele og komfyr, så en manuell knapp er fortsatt det enkleste utgangspunktet.

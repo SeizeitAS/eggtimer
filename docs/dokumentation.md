@@ -16,10 +16,12 @@ Gi en enkel og pålitelig måte å tidsstyre koking av egg og baking, uten å gj
 
 Brukeren velger hardhet og startmetode. Nedtellingen starter, og pipelyden spilles når tiden er ute.
 
+**Kaldt vann** er vann på 5–10 °C. **Kokende vann** er vann som koker. Startmetoden for kaldt vann er ikke besluttet ennå, se `docs/scrum.md`.
+
 | Hardhet | Beskrivelse | Status |
 | --- | --- | --- |
 | Bløtkokt | Flytende plomme, stivnede hvite | Tid må testes |
-| Smilende | Fast hvite, delvis stivnet plomme | Tid må testes, se `docs/rapport.md` |
+| Smilende | Fast hvite, delvis stivnet plomme. Ingen del av plommen er helt flytende | Tid må testes, se `docs/rapport.md` |
 | Hardkokt | Fast plomme | Tid må testes |
 
 ### 2. Bestillingsmodus (flere grupper i samme kjele)
@@ -50,7 +52,7 @@ En vanlig timer med navngitte standardtider for julebakst, for eksempel «Pepper
 
 ## Språk
 
-Alle tekster ligger i språkfiler under `lang/`. Nytt språk legges til ved å lage en ny fil med samme nøkler. Språk velges i appen og lagres lokalt.
+Alle tekster ligger i språkfiler under `lang/`. Foreløpig støttes norsk og engelsk. Nytt språk kan legges til ved å lage en ny språkfil med samme nøkler, uten endringer i koden. Språk velges i appen og lagres lokalt.
 
 ## Struktur
 
@@ -65,7 +67,7 @@ Alle tekster ligger i språkfiler under `lang/`. Nytt språk legges til ved å l
 
 ## Teknisk oversikt (utkast)
 
-- Statisk webapp: HTML, CSS og JavaScript, uten backend.
+- Web-app: statisk, med HTML, CSS og JavaScript, uten backend. Plattformen er besluttet.
 - Nedtelling basert på klokkeslett (`Date.now()`), slik at den ikke driver når fanen er i bakgrunn.
 - Pipelyd via Web Audio API.
 - Språkfiler som JSON, lastet ved oppstart.

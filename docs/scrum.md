@@ -10,6 +10,16 @@
 
 Hver sprint varer **2 uker**. Sprint 1 starter når beslutningene under er tatt.
 
+## Beslutninger
+
+| Dato | Beslutning |
+| --- | --- |
+| 2026-11-07 | «Smilende» er en mellomting mellom bløtkokt og hardkokt. Deler av plommen er stivnet, og ingenting er helt flytende. |
+| 2026-11-07 | «Kaldt vann» er vann på 5–10 °C. |
+| 2026-11-07 | Plattformen er web-app. |
+| 2026-11-07 | Språk er norsk og engelsk. Flere språk kan legges til med egen språkfil. |
+| Åpen | Startmetode for kaldt vann: manuell «vann koker»-knapp eller estimat av tiden til kok. |
+
 ## Definition of Done
 
 En oppgave er ferdig når:
