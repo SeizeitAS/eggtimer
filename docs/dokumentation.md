@@ -21,6 +21,8 @@ Brukeren velger hardhet og startmetode. Nedtellingen starter, og pipelyden spill
 - **«Vann koker»-knapp:** brukeren trykker når vannet koker, og nedtellingen starter da.
 - **Estimat:** appen starter nedtellingen etter en tid til kok som brukeren har kalibrert.
 
+Kalibrering gjøres med den kasserollen brukeren faktisk bruker: kasserollen settes på komfyren, brukeren starter kalibrering, og trykker «vann koker» når vannet koker. Tiden lagres som utgangspunkt for estimatet. Kalibreringen kan gjøres på nytt når som helst.
+
 ### 1b. Kalibrering etter tilbakemelding
 
 Etter koking eller baking kan brukeren gi tilbakemelding:

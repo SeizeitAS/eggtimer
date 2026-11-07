@@ -133,3 +133,11 @@ Kildene er uenige, og forutsetningene er ofte ikke oppgitt. Den største forskje
 **Risiko:** lokal lagring gir ingen synkronisering mellom enheter, og tilbakemeldinger fra én enhet gjelder ikke den andre. Dette bør vurderes igjen når vi vet hvor mange som bruker appen.
 
 **Risiko for estimat:** tiden til kok er avhengig av kjele og komfyr, og varierer mellom økter. Estimatet bør derfor vises med en tydelig merking, og brukeren bør kunne overstyre det.
+
+## 12. Kalibrering av estimat-modus (2026-11-07)
+
+- Estimatet for kaldt vann kalibreres med den kasserollen brukeren faktisk bruker. Brukeren setter kasserollen på komfyren, starter kalibrering og trykker «vann koker» når vannet koker.
+- Tiden til kok lagres som utgangspunkt. Tilbakemeldinger justerer den senere.
+- Kalibreringen kan gjøres på nytt. Flere kasseroller kan lagres med navn (F4b).
+
+**Konsekvens:** Dette gjør estimat-modusen avhengig av at brukeren kalibrerer én gang per kasserolle. Uten kalibrering bør modusen ikke være valgbar.
