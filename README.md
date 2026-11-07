@@ -2,7 +2,7 @@
 
 Eggtimer gir nøyaktig nedtelling for kokte egg, og en vanlig timer for julebakst. Velg hardhet og om vannet er kaldt eller kokende. Med bestillingsmodus kan du legge flere egg i samme kjele og få varsel etter hvert som hver gruppe er ferdig. Når tiden er ute, spilles en pipelyd. Språket kan byttes.
 
-**Status:** eggtimer for enkeltegg og bestillinger, for kokende og kaldt vann. Kalibrering og tilbakemelding er laget. Tidene er foreløpige. Julebakst-timer er ikke laget ennå.
+**Status:** eggtimer for enkeltegg og bestillinger, for kokende og kaldt vann, med kalibrering og tilbakemelding. Julebakst-timer med standardtider og egen timer er laget. Tidene er foreløpige.
 
 ## Kjøre lokalt
 

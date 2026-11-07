@@ -1,0 +1,15 @@
+{
+  "status": "foreløpig, må verifiseres (se docs/julebakst.md)",
+  "items": [
+    { "id": "pepperkaker_tynne", "temp": 200, "minutes": 6 },
+    { "id": "pepperkaker_tykke", "temp": 200, "minutes": 10 },
+    { "id": "pepperkaker_hus", "temp": 200, "minutes": 12 },
+    { "id": "pepperkake_pa_pinne", "temp": 200, "minutes": 11 },
+    { "id": "sirupssnipper", "temp": 180, "minutes": 10 },
+    { "id": "serinakaker", "temp": 200, "minutes": 8 },
+    { "id": "sjakkbrettkaker", "temp": 175, "minutes": 10 },
+    { "id": "sandnotter", "temp": 200, "minutes": 10 },
+    { "id": "heksefingre", "temp": 190, "minutes": 9 },
+    { "id": "lussekatter", "temp": 225, "minutes": 9 }
+  ]
+}

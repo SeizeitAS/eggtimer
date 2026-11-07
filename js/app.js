@@ -1,6 +1,6 @@
 // Oppstart og visning for Eggtimer.
 // Logikk ligger i: timer.js (nedtelling), alarm.js (pipe), calibration.js (justering og kalibrering),
-// order.js (bestillingsmodus), store.js (lagring).
+// order.js (bestillingsmodus), bake.js (julebakst), store.js (lagring).
 
 (function () {
   'use strict';
@@ -10,6 +10,7 @@
   const alarm = window.EggiAlarm;
   const cal = window.EggiCalibration;
   const order = window.EggiOrder;
+  const bake = window.EggiBake;
   const store = window.EggiStore;
 
   const HARDNESS = ['soft', 'semi', 'hard'];
@@ -21,10 +22,14 @@
   };
   const TICK_MS = 250;
 
-  // phase: idle | heating | calibrating | running | done | orderRunning | orderDone
+  // phase: idle | heating | calibrating | running | done | orderRunning | orderDone | bakeRunning | bakeDone
   const state = {
     times: null,            // sekunder per hardhet for kokende vann, fra data/egg-times.json
-    mode: 'single',         // single | order
+    mode: 'single',         // single | order | bake
+    bakeItems: [],          // standard julebakst, fra data/julebakst.json
+    bakeChoice: null,       // id på standard bakst, eller 'custom'
+    bakeCustom: { name: '', temp: bake.DEFAULT_TEMP, minutes: bake.DEFAULT_MINUTES },
+    bakeRun: null,          // { name, temp, timer } for pågående julebakst-timer
     hardness: 'soft',
     water: 'boiling',
     phase: 'idle',
@@ -63,6 +68,53 @@
     return state.mode === 'order';
   }
 
+  function isBake() {
+    return state.mode === 'bake';
+  }
+
+  async function loadBakeItems() {
+    try {
+      const response = await fetch('data/julebakst.json');
+      if (!response.ok) throw new Error('Kunne ikke laste data/julebakst.json');
+      const data = await response.json();
+      state.bakeItems = Array.isArray(data.items) ? data.items : [];
+    } catch (err) {
+      console.error(err);
+      state.bakeItems = [];
+    }
+    if (!state.bakeChoice) {
+      state.bakeChoice = state.bakeItems.length > 0 ? state.bakeItems[0].id : 'custom';
+    }
+  }
+
+  // Valgt bakst: standard eller egen timer.
+  function bakeSelection() {
+    if (state.bakeChoice === 'custom' || !bake.findItem(state.bakeItems, state.bakeChoice)) {
+      const c = state.bakeCustom;
+      return {
+        name: c.name.trim() || i18n.t('bake.custom'),
+        temp: c.temp,
+        minutes: c.minutes,
+      };
+    }
+    const item = bake.findItem(state.bakeItems, state.bakeChoice);
+    return {
+      name: i18n.t('bake.item.' + item.id),
+      temp: item.temp,
+      minutes: item.minutes,
+    };
+  }
+
+  function startBake(now) {
+    const sel = bakeSelection();
+    state.bakeRun = {
+      name: sel.name,
+      temp: sel.temp,
+      timer: timer.createTimer(bake.bakeSeconds(sel.minutes) * 1000, now),
+    };
+    state.phase = 'bakeRunning';
+  }
+
   function estimateAvailable() {
     return state.boilSeconds !== null;
   }
@@ -96,6 +148,7 @@
   function resetToIdle() {
     state.phase = 'idle';
     state.running = null;
+    state.bakeRun = null;
     state.heatingStartMs = null;
     state.orderGroups = null;
     state.orderRows = [];
@@ -115,6 +168,16 @@
   function onStart() {
     alarm.unlock();
     const now = Date.now();
+    if (isBake()) {
+      if (state.phase === 'bakeDone') {
+        alarm.stop();
+        state.alarmOn = false;
+        resetToIdle();
+      }
+      if (state.phase === 'idle') startBake(now);
+      render();
+      return;
+    }
     if (state.phase === 'calibrating') {
       state.heatingStartMs = now;
     } else if (isOrder()) {
@@ -281,6 +344,7 @@
       [
         { value: 'single', label: i18n.t('mode.single') },
         { value: 'order', label: i18n.t('mode.order') },
+        { value: 'bake', label: i18n.t('mode.bake') },
       ],
       state.mode,
       locked,
@@ -289,6 +353,36 @@
         render();
       }
     );
+  }
+
+  // ---- Visning: julebakst ----
+
+  function renderBakeChoices(locked) {
+    const options = state.bakeItems.map(function (item) {
+      return {
+        value: item.id,
+        label: i18n.t('bake.item.' + item.id),
+        detail: item.temp + ' °C · ' + timer.formatMs(item.minutes * 60000),
+      };
+    });
+    options.push({ value: 'custom', label: i18n.t('bake.custom'), detail: '' });
+
+    renderGroup(el.bakeList, 'bake', options, state.bakeChoice, locked, function (value) {
+      state.bakeChoice = value;
+      render();
+    });
+
+    const custom = state.bakeChoice === 'custom';
+    el.bakeCustom.hidden = !custom;
+    el.bakeCustomName.disabled = locked;
+    el.bakeCustomTemp.disabled = locked;
+    el.bakeCustomMinutes.disabled = locked;
+    if (document.activeElement !== el.bakeCustomName) el.bakeCustomName.value = state.bakeCustom.name;
+    if (document.activeElement !== el.bakeCustomTemp) el.bakeCustomTemp.value = String(state.bakeCustom.temp);
+    if (document.activeElement !== el.bakeCustomMinutes) el.bakeCustomMinutes.value = String(state.bakeCustom.minutes);
+    el.bakeCustomNameLabel.textContent = i18n.t('bake.customName');
+    el.bakeCustomTempLabel.textContent = i18n.t('bake.customTemp');
+    el.bakeCustomMinutesLabel.textContent = i18n.t('bake.customMinutes');
   }
 
   // ---- Visning: bestilling ----
@@ -406,7 +500,7 @@
     const now = Date.now();
     const phase = state.phase;
     const idle = phase === 'idle';
-    const single = !isOrder();
+    const single = state.mode === 'single';
 
     el.modeHeading.textContent = i18n.t('mode.label');
     el.hardnessHeading.textContent = i18n.t('egg.hardness.label');
@@ -416,7 +510,12 @@
     renderChoices(!idle);
 
     el.hardnessCard.hidden = !single;
-    el.orderCard.hidden = single;
+    el.orderCard.hidden = !isOrder();
+    el.bakeCard.hidden = !isBake();
+    el.waterCard.hidden = isBake();
+    el.bakeHeading.textContent = i18n.t('bake.heading');
+    el.bakeHint.textContent = i18n.t('bake.hint');
+    if (isBake()) renderBakeChoices(!idle);
     el.orderHeading.textContent = i18n.t('order.heading');
     el.orderNote.textContent = i18n.t('order.note');
     updateOrderInputs(!idle);
@@ -425,11 +524,11 @@
       : i18n.t('order.total').replace('{count}', String(orderTotal()));
 
     // Kalibrering: vises for kaldt vann.
-    el.calibrationInfo.hidden = !isCold();
+    el.calibrationInfo.hidden = !isCold() || isBake();
     el.calibrationInfo.textContent = estimateAvailable()
       ? i18n.t('water.calibrated').replace('{time}', timer.formatMs(state.boilSeconds * 1000))
       : i18n.t('water.noCalibration');
-    el.calibrate.hidden = !(isCold() && idle);
+    el.calibrate.hidden = !(isCold() && idle && !isBake());
     el.calibrate.textContent = i18n.t('water.calibrate');
 
     // Status og nedtelling.
@@ -442,6 +541,17 @@
       el.status.textContent = i18n.t('order.allTaken');
       el.status.className = 'status done';
       el.countdown.textContent = '0:00';
+    } else if (phase === 'bakeDone') {
+      el.status.textContent = i18n.t('bake.done');
+      el.status.className = 'status done';
+      el.countdown.textContent = '0:00';
+    } else if (phase === 'bakeRunning') {
+      el.status.textContent = i18n.t('bake.remaining');
+      el.countdown.textContent = timer.formatMs(timer.remainingMs(state.bakeRun.timer, now));
+    } else if (isBake()) {
+      const sel = bakeSelection();
+      el.status.textContent = i18n.t('bake.ready');
+      el.countdown.textContent = timer.formatMs(sel.minutes * 60000);
     } else if (phase === 'running') {
       el.status.textContent = i18n.t('egg.remaining');
       el.countdown.textContent = timer.formatMs(timer.remainingMs(state.running, now));
@@ -482,14 +592,16 @@
 
     // Knapper.
     const orderIdle = isOrder() && idle;
-    const canStart = (phase === 'idle' || (phase === 'calibrating' && state.heatingStartMs === null))
-      && (!isOrder() || orderTotal() > 0);
+    const bakeStartable = isBake() && (idle || phase === 'bakeDone');
+    const canStart = bakeStartable
+      || ((phase === 'idle' || (phase === 'calibrating' && state.heatingStartMs === null))
+        && (!isOrder() || orderTotal() > 0) && !isBake());
     const canBoil = phase === 'heating' || (phase === 'calibrating' && state.heatingStartMs !== null);
-    const canCancel = phase === 'heating' || phase === 'running' || phase === 'calibrating' || phase === 'orderRunning';
+    const canCancel = phase === 'heating' || phase === 'running' || phase === 'calibrating' || phase === 'orderRunning' || phase === 'bakeRunning';
 
     el.start.hidden = !canStart;
     el.start.disabled = isOrder() && orderTotal() === 0;
-    el.start.textContent = i18n.t(orderIdle ? 'order.start' : 'egg.start');
+    el.start.textContent = i18n.t(isBake() ? 'bake.start' : orderIdle ? 'order.start' : 'egg.start');
     el.boil.hidden = !canBoil;
     el.boil.textContent = i18n.t('egg.boilNow');
     el.cancel.hidden = !canCancel;
@@ -517,6 +629,10 @@
       state.phase = 'done';
       state.alarmOn = true;
       alarm.start();
+    } else if (state.phase === 'bakeRunning' && timer.isDone(state.bakeRun.timer, now)) {
+      state.phase = 'bakeDone';
+      state.alarmOn = true;
+      alarm.start();
     } else if (state.phase === 'orderRunning') {
       const fresh = order.newlyDue(state.orderGroups, now);
       if (fresh.length > 0) {
@@ -539,6 +655,19 @@
   }
 
   function bindEvents() {
+    el.bakeCustomName.addEventListener('input', function () {
+      state.bakeCustom.name = el.bakeCustomName.value;
+    });
+    el.bakeCustomTemp.addEventListener('change', function () {
+      state.bakeCustom.temp = bake.clampTemp(el.bakeCustomTemp.value);
+      el.bakeCustomTemp.value = String(state.bakeCustom.temp);
+      render();
+    });
+    el.bakeCustomMinutes.addEventListener('change', function () {
+      state.bakeCustom.minutes = bake.clampMinutes(el.bakeCustomMinutes.value);
+      el.bakeCustomMinutes.value = String(state.bakeCustom.minutes);
+      render();
+    });
     el.start.addEventListener('click', onStart);
     el.boil.addEventListener('click', onBoil);
     el.cancel.addEventListener('click', onCancel);
@@ -594,6 +723,18 @@
     el.countdown = byId('countdown');
     el.status = byId('status');
     el.orderList = byId('order-list');
+    el.waterCard = byId('water-card');
+    el.bakeCard = byId('bake-card');
+    el.bakeHeading = byId('bake-heading');
+    el.bakeHint = byId('bake-hint');
+    el.bakeList = byId('bake-list');
+    el.bakeCustom = byId('bake-custom');
+    el.bakeCustomName = byId('bake-custom-name');
+    el.bakeCustomTemp = byId('bake-custom-temp');
+    el.bakeCustomMinutes = byId('bake-custom-minutes');
+    el.bakeCustomNameLabel = byId('bake-custom-name-label');
+    el.bakeCustomTempLabel = byId('bake-custom-temp-label');
+    el.bakeCustomMinutesLabel = byId('bake-custom-minutes-label');
     el.start = byId('start');
     el.boil = byId('boil');
     el.cancel = byId('cancel');
@@ -632,6 +773,7 @@
 
     state.times = await loadTimes();
     loadStored();
+    await loadBakeItems();
     buildOrderInputs();
     bindEvents();
     render();

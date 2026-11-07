@@ -79,8 +79,8 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 
 | # | Oppgave | Avhengig av |
 | --- | --- | --- |
-| D1 | Liste med standardtider fra `docs/julebakst.md` | A5 |
-| D2 | Egne timere med navn, tid og temperatur | B1 |
+| D1 | Liste med standardtider fra `docs/julebakst.md`. Gjort: `data/julebakst.json` | A5 |
+| D2 | Egne timere med navn, tid og temperatur. Gjort: egen timer i julebakst-modus, ikke lagret | B1 |
 
 ### Epic E: Språk
 
@@ -126,3 +126,4 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | Sprint 2 (kaldt vann) | 2026-11-07 | Kaldt vann-modus, kalibrering og tilbakemelding (B4, F1, F3, F4, F5) | Gjort. F2 og F4b er ikke med |
 | Sprint 3 (bestilling) | 2026-11-07 | Bestillingsmodus med varsler og status (C1, C2, C3) | Gjort. Julebakst-timer (D) er ikke med |
 | Sprint 4 (hjelp) | 2026-11-07 | Brukerhåndbok i appen (G1) | Gjort |
+| Sprint 5 (julebakst) | 2026-11-07 | Julebakst-timer med standardtider og egen timer (D1, D2) | Gjort. Bakst-tilbakemelding (F2) er ikke med |

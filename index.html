@@ -34,7 +34,27 @@
       <p id="order-note" class="hint muted" data-i18n="order.note"></p>
     </section>
 
-    <section class="card">
+    <section id="bake-card" class="card" hidden>
+      <h2 id="bake-heading" class="section-title" data-i18n="bake.heading">Velg bakst</h2>
+      <div id="bake-list" class="choices" role="radiogroup"></div>
+      <div id="bake-custom" class="custom" hidden>
+        <label class="field">
+          <span id="bake-custom-name-label" data-i18n="bake.customName">Navn</span>
+          <input id="bake-custom-name" type="text" maxlength="40" autocomplete="off">
+        </label>
+        <label class="field">
+          <span id="bake-custom-temp-label" data-i18n="bake.customTemp">Temperatur (°C)</span>
+          <input id="bake-custom-temp" type="number" min="50" max="260" step="5" inputmode="numeric">
+        </label>
+        <label class="field">
+          <span id="bake-custom-minutes-label" data-i18n="bake.customMinutes">Minutter</span>
+          <input id="bake-custom-minutes" type="number" min="1" max="120" step="1" inputmode="numeric">
+        </label>
+      </div>
+      <p id="bake-hint" class="hint muted" data-i18n="bake.hint"></p>
+    </section>
+
+    <section id="water-card" class="card">
       <h2 id="water-heading" class="section-title" data-i18n="water.label">Vann</h2>
       <div id="water" class="choices" role="radiogroup"></div>
       <p id="calibration-info" class="hint muted" hidden></p>
@@ -76,6 +96,7 @@
   <script src="js/alarm.js"></script>
   <script src="js/calibration.js"></script>
   <script src="js/order.js"></script>
+  <script src="js/bake.js"></script>
   <script src="js/store.js"></script>
   <script src="js/app.js"></script>
 </body>
