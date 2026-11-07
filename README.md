@@ -40,6 +40,16 @@ Nytt språk legges til slik:
 2. Legg koden til i `lang/languages.json`.
 3. Kjør `npm test`.
 
+## Publisere på egen webserver
+
+```bash
+npm run build    # lager dist/ med de filene som skal ut
+```
+
+Last opp hele innholdet i `dist/` til webserveren, for eksempel med `rsync -av dist/ bruker@server:/var/www/eggtimer/`, eller med FTP/SFTP. Filene er statiske, så serveren trenger ingen egen kjøring. Alle stier er relative, så appen fungerer både i rotmappen og i en undermappe.
+
+`dist/` er ikke med i git.
+
 ## Brukerhåndbok
 
 Brukerhåndboken ligger i appen under «Hjelp», på norsk og engelsk. Tekstene ligger i `help/`. Nytt språk får hjelp ved å lage `help/<kode>.html`. Mangler den, brukes engelsk.
