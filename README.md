@@ -40,6 +40,10 @@ Nytt språk legges til slik:
 2. Legg koden til i `lang/languages.json`.
 3. Kjør `npm test`.
 
+## Brukerhåndbok
+
+Brukerhåndboken ligger i appen under «Hjelp», på norsk og engelsk. Tekstene ligger i `help/`. Nytt språk får hjelp ved å lage `help/<kode>.html`. Mangler den, brukes engelsk.
+
 ## Dokumentasjon
 
 - [`docs/dokumentation.md`](docs/dokumentation.md): formål, funksjoner, omfang og struktur

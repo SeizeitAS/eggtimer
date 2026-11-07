@@ -26,6 +26,7 @@ Registrer medgått tid per arbeidsdag. Oppgi tid i timer med én desimal (for ek
 | 2026-11-07 | SeizeitAS (med Claude) | Eggtimer for kokende vann med pipelyd (B2, B3), tester og nettleserkontroll | Utvikling | 1,5 | Estimat, ikke målt |
 | 2026-11-07 | SeizeitAS (med Claude) | Kaldt vann-modus, kalibrering og tilbakemelding (B4, F1, F3, F4, F5), tester og nettleserkontroll | Utvikling | 2,0 | Estimat, ikke målt |
 | 2026-11-07 | SeizeitAS (med Claude) | Bestillingsmodus med varsler og status (C1, C2, C3), tester og nettleserkontroll | Utvikling | 1,5 | Estimat, ikke målt |
+| 2026-11-07 | SeizeitAS (med Claude) | Brukerhåndbok i appen på norsk og engelsk (G1), tester og nettleserkontroll | Dokumentasjon | 1,0 | Estimat, ikke målt |
 
 _Tidene er estimater. Vi har ikke målt tiden i sanntid, så juster etter behov._
 
@@ -33,4 +34,4 @@ _Tidene er estimater. Vi har ikke målt tiden i sanntid, så juster etter behov.
 
 | Navn | Uke | Totalt timer |
 | --- | --- | --- |
-| SeizeitAS (med Claude) | 45 | 9,8 |
+| SeizeitAS (med Claude) | 45 | 10,8 |

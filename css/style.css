@@ -256,3 +256,29 @@ button.secondary {
   min-width: 0;
   padding: 10px;
 }
+
+.back,
+.help-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.help h2 {
+  font-size: 1.15rem;
+  margin: 24px 0 8px;
+  color: var(--accent);
+}
+
+.help h2:first-child {
+  margin-top: 0;
+}
+
+.help ul,
+.help ol {
+  padding-left: 22px;
+}
+
+.help li {
+  margin: 4px 0;
+}

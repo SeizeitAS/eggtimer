@@ -110,6 +110,12 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | F4b | Flere kasseroller: kalibrering kan lagres per navngitt kasserolle, slik at brukeren kan velge riktig ved oppstart | F4 |
 | F5 | Visning av gjeldende justering for hver tid, så brukeren ser hva som er lagret. Gjort | F3 |
 
+### Epic G: Hjelp
+
+| # | Oppgave | Avhengig av |
+| --- | --- | --- |
+| G1 | Brukerhåndbok i appen (hjelp), på norsk og engelsk. Gjort: `hjelp.html` og `help/<kode>.html` | E1 |
+
 ## Sprintlogg
 
 | Sprint | Periode | Mål | Status |
@@ -119,3 +125,4 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | Sprint 2 (eggtimer) | 2026-11-07 | Valg av hardhet, nedtelling og pipelyd (B2, B3) | Gjort, unntatt test på mobil og endelige tider |
 | Sprint 2 (kaldt vann) | 2026-11-07 | Kaldt vann-modus, kalibrering og tilbakemelding (B4, F1, F3, F4, F5) | Gjort. F2 og F4b er ikke med |
 | Sprint 3 (bestilling) | 2026-11-07 | Bestillingsmodus med varsler og status (C1, C2, C3) | Gjort. Julebakst-timer (D) er ikke med |
+| Sprint 4 (hjelp) | 2026-11-07 | Brukerhåndbok i appen (G1) | Gjort |

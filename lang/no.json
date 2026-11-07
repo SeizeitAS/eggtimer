@@ -45,5 +45,8 @@
   "order.dueNow": "Ta ut nå",
   "order.takeOut": "Tatt ut",
   "order.done": "Ferdig",
-  "order.allTaken": "Alle egg er tatt ut!"
+  "order.allTaken": "Alle egg er tatt ut!",
+  "help.title": "Hjelp",
+  "help.back": "Tilbake",
+  "help.link": "Hjelp"
 }
