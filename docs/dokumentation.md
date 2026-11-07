@@ -68,13 +68,16 @@ En vanlig timer med navngitte standardtider for julebakst, for eksempel «Pepper
 
 ## Språk
 
-Alle tekster ligger i språkfiler under `lang/`. Foreløpig støttes norsk og engelsk. Nytt språk kan legges til ved å lage en ny språkfil med samme nøkler, uten endringer i koden. Språk velges i appen og lagres lokalt.
+Alle tekster ligger i språkfiler under `lang/`. Foreløpig støttes norsk og engelsk. Norsk er standardspråk, og engelsk brukes som reserve for manglende nøkler. Nytt språk kan legges til ved å lage en ny språkfil med samme nøkler, uten endringer i koden. Språk velges i appen og lagres lokalt.
 
 ## Struktur
 
 | Fil | Innhold |
 | --- | --- |
-| `README.md` | Kort beskrivelse |
+| `README.md` | Kort beskrivelse og hvordan appen kjøres |
+| `index.html`, `js/`, `css/` | Web-appen |
+| `lang/` | Språkfiler og liste over språk |
+| `tests/` | Tester, inkl. sjekk av språkfiler |
 | `docs/dokumentation.md` | Denne filen: formål, funksjoner, omfang og struktur |
 | `docs/rapport.md` | Utforskning, kilder, risiko og åpne spørsmål |
 | `docs/scrum.md` | Utviklingsplan, roller, sprinter og backlog |

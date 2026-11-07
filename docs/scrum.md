@@ -115,3 +115,4 @@ Oppgavene er ikke estimert ennå. Estimat settes i sprint planning.
 | Sprint | Periode | Mål | Status |
 | --- | --- | --- | --- |
 | Sprint 1 | _(dato)_ | Beslutninger og testing | Planlagt |
+| Sprint 1 (grunnstruktur) | 2026-11-07 | Web-app med språkfiler og språktest (B1, E1). Beslutningene er tatt. | Gjort |
